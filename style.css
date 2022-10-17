@@ -10,12 +10,13 @@ html {
 }
 
 .navigation {
-	height: 90vh;
+	height: 97vh;
 	width: 100%;
 	text-align: right;
-	background-image: url("background.jpg");
+	background-image: url(Resources/background.jpg);
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 }
 
 .nav {
@@ -35,11 +36,12 @@ nav ul li {
 
 nav ul li a {
 	display: inline-block;
-	color: #fff;
-	font-size: 12px;
+	color: whitesmoke;
+	font-size: 14px;
+	font-weight: 400;
 	text-transform: uppercase;
 	text-decoration: none;
-	letter-spacing: 0.15em;
+	letter-spacing: 0.17em;
 	text-align: right;
 	justify-content: right;
 	padding: 3px 3px;
@@ -54,10 +56,10 @@ nav ul li a:after {
 	bottom: 0;
 	content: "";
 	display: block;
-	height: 2.5px;
+	height: 2.3px;
 	left: 50%;
 	position: absolute;
-	background: #64fca6;
+	background: #7efdb5;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 }
@@ -75,21 +77,6 @@ span {
 	color: #60e097
 }
 
-.btn {
-	background-color: #39466c;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 10px 25px;
-	border-radius: 30px;
-	transition: transform .4s;
-}
-
-.btn:hover {
-	transform: scale(1.2);
-}
-
 .content {
 	position: absolute;
 	top: 40%;
@@ -102,12 +89,26 @@ h1 {
 	color: white;
 	margin: 20px 0px 10px;
 	font-size: 75px;
+	font-weight: bold;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing 2.5s forwards;
+}
+
+@keyframes typing {
+	from {
+		width: 0
+	}
+
+	to {
+		width: 100%
+	}
 }
 
 h3 {
 	color: white;
 	font-size: 25px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -118,14 +119,15 @@ h4 {
 
 .about {
 	width: 100%;
-	padding: 100px 0px;
+	height: 97vh;
+	padding: 20vh 0px;
 	background-color: #191919;
-	/* background-color: #313840; */
 }
 
 .about img {
 	height: auto;
-	width: auto;
+	max-width: 100%;
+	;
 	transition: ease-out 200ms;
 }
 
@@ -136,18 +138,15 @@ h4 {
 }
 
 .about-text {
-	width: 550px;
+	width: 50vw;
+	margin-left: 3vw;
 }
 
 .main {
-	width: 1130px;
-	max-width: 95%;
 	margin: 0 auto;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 }
-
 .about-text h2 {
 	color: white;
 	font-size: 75px;
@@ -168,30 +167,103 @@ h4 {
 	letter-spacing: 1px;
 	line-height: 28px;
 	font-size: 18px;
-	margin-bottom: 45px;
+	margin-bottom: 3vw;
 }
 
-button {
+.about-button {
 	background-color: transparent;
 	border: 2px solid #64fca6;
-	color: white;
+	color: whitesmoke;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 900;
 	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s;
+	border-radius: 35px;
+	transition: .6s;
 }
 
-button:hover {
-	background-color: #398f5e;
+.about-button:hover {
+	color: #101010;
+	background-color: #64fca6;
 	border: 2px solid transparent;
 	cursor: pointer;
 }
 
-.featured {
+.education {
 	background: #101010;
+	height: 97vh;
 	width: 100%;
 	padding: 100px 0px;
+	align-items: center;
+}
+
+.edu-title h2 {
+	color: white;
+	font-size: 75px;
+	width: 1130px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.edu-box {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.edu-card {
+	height: 300px;
+	width: 300px;
+	color: antiquewhite;
+	background: #191919;
+	border-radius: 9px;
+	margin: 25px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	align-items: center;
+	/* justify-content: center; */
+}
+
+.edu-card h4 {
+	font-size: 35px;
+	color: whitesmoke;
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.edu-card p {
+	justify-content: space-around;
+	margin: 15px;
+	margin-top: 25px;
+	letter-spacing: 0.10em;
+	/* justify-content: center; */
+}
+
+.edu-card:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2.75px;
+	left: 50%;
+	position: absolute;
+	background: #64fca6;
+	transition: width 0.7s ease 0s, left 0.7s ease 0s;
+	width: 0;
+}
+
+.edu-card:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+.featured {
+	background: #191919;
+	width: 100%;
+	height: 97vh;
+	padding: 100px 0px;
+	align-items: center;
 }
 
 .title h2 {
@@ -207,26 +279,11 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	/* min-height: 400px; */
 }
 
 .card {
 	height: 380px;
 	width: 350px;
-	padding: px px;
-	background: transparent;
-	border-radius: 9px;
-	margin: 15px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-	align-items: center;
-}
-
-.card2 {
-	height: 380px;
-	width: 433px;
-	padding: px px;
 	background: transparent;
 	border-radius: 9px;
 	margin: 15px;
@@ -241,11 +298,11 @@ button:hover {
 	bottom: 0;
 	content: "";
 	display: block;
-	height: 2.5px;
+	height: 2.75px;
 	left: 50%;
 	position: absolute;
 	background: #64fca6;
-	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	transition: width 0.7s ease 0s, left 0.7s ease 0s;
 	width: 0;
 }
 
@@ -254,19 +311,30 @@ button:hover {
 	left: 0;
 }
 
+.card2 {
+	height: 380px;
+	width: 433px;
+	background: transparent;
+	border-radius: 9px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	align-items: center;
+}
+
 .card2:after {
 	background: none repeat scroll 0 0 transparent;
 	bottom: 0;
 	content: "";
 	display: block;
-	height: 2.5px;
+	height: 2.75px;
 	left: 50%;
 	position: absolute;
 	background: #64fca6;
-	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	transition: width 0.9s ease 0s, left 0.9s ease 0s;
 	width: 0;
 }
-
 
 .card2:hover:after {
 	width: 100%;
@@ -275,13 +343,14 @@ button:hover {
 
 .feature_text {
 	color: whitesmoke;
-	font-size: 13px;
-	font-weight:500;
+	font-size: 12px;
+	font-weight: 200;
+	font-variant: small-caps;
 	line-height: 27px;
 	margin-bottom: 25px;
 	padding: px 7px;
-	text-transform: uppercase;	
-	 letter-spacing: 0.01em;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
 	font-family: 'Josefin Sans';
 }
 
@@ -289,7 +358,7 @@ footer {
 	position: relative;
 	width: 100%;
 	height: 300px;
-	background: #191919;
+	background: #101010;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
