@@ -1,405 +1,390 @@
 * {
-	padding: 0;
-	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+
 .navigation {
-	height: 97vh;
-	width: 100%;
-	text-align: right;
-	background-image: url(Resources/background.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+    height: 97vh;
+    width: 100%;
+    text-align: right;
+    background-image: url(Resources/background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .nav {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 10%;
-	padding-left: 8%;
-	padding-right: 8%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-left: 8%;
+    padding-right: 8%;
+    position: fixed;
+    height: 30px;
+    line-height: 30px;
+    width: 100vw;
+    z-index: 10;
+}
+
+.logo {
+    padding-top: 1.5%;
+    padding-left: 2%;
+    float: left;
+    margin-left: 28px;
+    height: 30px;
 }
 
 
 nav ul li {
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px 25px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
 }
 
 nav ul li a {
-	display: inline-block;
-	color: whitesmoke;
-	font-size: 14px;
-	font-weight: 400;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 0.17em;
-	text-align: right;
-	justify-content: right;
-	padding: 3px 3px;
-	position: relative;
-	top: 40px;
-	right: 7%;
-	text-align: right;
+    display: inline-block;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.17em;
+    text-align: right;
+    justify-content: right;
+    padding: 3px 3px;
+    position: relative;
+    top: 40px;
+    right: 7%;
+    text-align: right;
 }
 
 nav ul li a:after {
-	background: none repeat scroll 0 0 transparent;
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 2.3px;
-	left: 50%;
-	position: absolute;
-	background: #7efdb5;
-	transition: width 0.3s ease 0s, left 0.3s ease 0s;
-	width: 0;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2.3px;
+    left: 50%;
+    position: absolute;
+    background: #7efdb5;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
 }
 
 nav ul li a:hover:after {
-	width: 100%;
-	left: 0;
+    width: 100%;
+    left: 0;
 }
 
 nav ul li a:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 span {
-	color: #60e097
+    color: #60e097
 }
 
 .content {
-	position: absolute;
-	top: 40%;
-	left: 8%;
-	text-align: left;
-	transform: translateY(-50%);
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    text-align: left;
+    transform: translateY(-50%);
 }
 
 h1 {
-	color: white;
-	margin: 20px 0px 10px;
-	font-size: 75px;
-	font-weight: bold;
-	overflow: hidden;
-	white-space: nowrap;
-	animation: typing 2.5s forwards;
+    color: white;
+    margin: 20px 0px 10px;
+    font-size: 70px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2.5s forwards;
 }
 
 @keyframes typing {
-	from {
-		width: 0
-	}
+    from {
+        width: 0
+    }
 
-	to {
-		width: 100%
-	}
+    to {
+        width: 100%
+    }
 }
 
 h3 {
-	color: white;
-	font-size: 25px;
-	margin-bottom: 20px;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 h4 {
-	color: #81bf99;
-	letter-spacing: 2px;
-	font-size: 20px;
+    color: #81bf99;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .about {
-	width: 100%;
-	height: 97vh;
-	padding: 20vh 0px;
-	background-color: #191919;
+    width: 100%;
+    height: 97vh;
+    padding: 10vh 0px;
+    background-color: #191919;
 }
 
 .about img {
-	height: auto;
-	max-width: 100%;
-	;
-	transition: ease-out 200ms;
+    height: auto;
+    max-width: 37%;
+    transition: ease-out 200ms;
+
 }
 
 .about img:hover {
-	transform: scale(1.05);
-	transition-delay: 3s;
-	transition: 300ms ease-in;
+    transform: scale(1.05);
+    transition-delay: 3s;
+    transition: 300ms ease-in;
 }
 
 .about-text {
-	width: 50vw;
-	margin-left: 3vw;
+    width: 40vw;
+    margin-left: 3vw;
+    text-align: justify;
 }
 
 .main {
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
+
 .about-text h2 {
-	color: white;
-	font-size: 75px;
-	text-transform: capitalize;
-	margin-bottom: 20px;
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
 
 .about-text h6 {
-	color: #54d28b;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
+    color: #54d28b;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
 }
 
 .about-text p {
-	color: rgba(236, 224, 236, 0.8);
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 3vw;
+    color: rgba(236, 224, 236, 0.8);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 3vw;
 }
 
 .about-button {
-	background-color: transparent;
-	border: 2px solid #64fca6;
-	color: whitesmoke;
-	text-decoration: none;
-	font-weight: 900;
-	padding: 13px 30px;
-	border-radius: 35px;
-	transition: .6s;
+    background-color: transparent;
+    border: 2px solid #64fca6;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 13px 30px;
+    border-radius: 35px;
+    transition: .6s;
 }
 
 .about-button:hover {
-	color: #101010;
-	background-color: #64fca6;
-	border: 2px solid transparent;
-	cursor: pointer;
+    color: #101010;
+    background-color: #64fca6;
+    border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .education {
-	background: #101010;
-	height: 97vh;
-	width: 100%;
-	padding: 100px 0px;
-	align-items: center;
+    background: #101010;
+    height: 97vh;
+    width: 100%;
+    padding: 100px 0px;
+    align-items: center;
 }
 
 .edu-title h2 {
-	color: white;
-	font-size: 75px;
-	width: 1130px;
-	margin: 30px auto;
-	text-align: center;
+    color: white;
+    font-size: 65px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
 }
 
 .edu-box {
-	display: flex;
-	align-items: center;
-	text-align: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .edu-card {
-	height: 300px;
-	width: 300px;
-	color: antiquewhite;
-	background: #191919;
-	border-radius: 9px;
-	margin: 25px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-	align-items: center;
-	/* justify-content: center; */
+    height: 300px;
+    width: 300px;
+    color: antiquewhite;
+    background: #191919;
+    border-radius: 9px;
+    margin: 25px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .edu-card h4 {
-	font-size: 35px;
-	color: whitesmoke;
-	padding-bottom: 25px;
-	padding-top: 25px;
+    font-size: 35px;
+    color: whitesmoke;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 .edu-card p {
-	justify-content: space-around;
-	margin: 15px;
-	margin-top: 25px;
-	letter-spacing: 0.10em;
-	/* justify-content: center; */
+    justify-content: space-around;
+    margin: 15px;
+    margin-top: 25px;
+    letter-spacing: 0.10em;
 }
 
 .edu-card:after {
-	background: none repeat scroll 0 0 transparent;
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 2.75px;
-	left: 50%;
-	position: absolute;
-	background: #64fca6;
-	transition: width 0.7s ease 0s, left 0.7s ease 0s;
-	width: 0;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2.75px;
+    left: 50%;
+    position: absolute;
+    background: #64fca6;
+    transition: width 0.7s ease 0s, left 0.7s ease 0s;
+    width: 0;
 }
 
 .edu-card:hover:after {
-	width: 100%;
-	left: 0;
+    width: 100%;
+    left: 0;
 }
 
 .featured {
-	background: #191919;
-	width: 100%;
-	height: 97vh;
-	padding: 100px 0px;
-	align-items: center;
+    background: #191919;
+    width: 100%;
+    height: 230vh;
+    padding: 100px 0px;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.title h2 {
-	color: white;
-	font-size: 75px;
-	width: 1130px;
-	margin: 30px auto;
-	text-align: center;
+.title {
+    color: white;
+    font-size: 65px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
 }
 
-.box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+.featured p {
+    font-size: 18px;
+    font-family: Cambria;
+    color: whitesmoke;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 20px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+
+.featured table {
+    margin: auto;
+    width: 65%;
+    padding: 10px;
+    padding-bottom: 100px;
 }
 
 .card {
-	height: 380px;
-	width: 350px;
-	background: transparent;
-	border-radius: 9px;
-	margin: 15px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-	align-items: center;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.card:after {
-	background: none repeat scroll 0 0 transparent;
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 2.75px;
-	left: 50%;
-	position: absolute;
-	background: #64fca6;
-	transition: width 0.7s ease 0s, left 0.7s ease 0s;
-	width: 0;
+.card:hover {
+    background-color: rgba(16, 16, 16, 0.91);
+    cursor: pointer;
+    transform: scale(1.02);
 }
 
-.card:hover:after {
-	width: 100%;
-	left: 0;
+.card img {
+    border-radius: 3%;
 }
 
-.card2 {
-	height: 380px;
-	width: 433px;
-	background: transparent;
-	border-radius: 9px;
-	margin: 15px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-	align-items: center;
+.card iframe {
+    border-radius: 6%;
 }
 
-.card2:after {
-	background: none repeat scroll 0 0 transparent;
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 2.75px;
-	left: 50%;
-	position: absolute;
-	background: #64fca6;
-	transition: width 0.9s ease 0s, left 0.9s ease 0s;
-	width: 0;
-}
-
-.card2:hover:after {
-	width: 100%;
-	left: 0;
-}
-
-.feature_text {
-	color: whitesmoke;
-	font-size: 12px;
-	font-weight: 200;
-	font-variant: small-caps;
-	line-height: 27px;
-	margin-bottom: 25px;
-	padding: px 7px;
-	text-transform: uppercase;
-	letter-spacing: 0.01em;
-	font-family: 'Josefin Sans';
-}
 
 footer {
-	position: relative;
-	width: 100%;
-	height: 300px;
-	background: #101010;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 footer p:nth-child(1) {
-	font-size: 30px;
-	color: whitesmoke;
-	margin-bottom: 20px;
-	font-weight: bold;
+    font-size: 30px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 footer p:nth-child(2) {
-	color: white;
-	font-size: 17px;
-	width: 500px;
-	text-align: center;
-	line-height: 20px;
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 20px;
 }
 
 .social {
-	display: flex;
+    display: flex;
 }
 
 .social a {
-	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #292929;
-	border-radius: 50%;
-	margin: 20px 10px;
-	color: #64fca6;
-	text-decoration: none;
-	font-size: 20px;
-	transition: 150ms ease-out;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #292929;
+    border-radius: 50%;
+    margin: 20px 10px;
+    color: #64fca6;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 150ms ease-out;
 }
 
 .social a:hover {
-	transform: scale(1.17);
-	transition: 200mss ease-in;
+    transform: scale(1.12);
+    transition: 200mss ease-in;
+    background: #64fca6;
+    color: #292929;
 }
