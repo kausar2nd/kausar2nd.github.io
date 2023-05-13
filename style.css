@@ -9,28 +9,38 @@ html {
     scroll-behavior: smooth;
 }
 
+nav {
+    display: flex;
+    position: absolute;
+    margin-top: 4.5vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: #60e097;
+}
+
+.logo img {
+    margin-left: 2vw;
+    width: 8vh;
+    height: auto;
+}
+
+.nav li {
+    margin: 0 10px;
+}
+
+.nav li:last-child {
+    margin-right: 0;
+}
 
 .navigation {
     height: 96vh;
     width: 100%;
-    text-align: right;
-    background-image: url(Resources/background.jpg);
+    background-image: url(Resources/background.png);
     background-size: cover;
     background-position: center;
 }
 
-.nav {
-    position: sticky;
-    padding-top: 2%;
-    padding-right: 2%;
-}
-
-.logo {
-    padding-top: 1.5%;
-    padding-left: 4%;
-    float: left;
-    height: 5vh;
-}
 
 nav ul li {
     list-style-type: none;
@@ -351,6 +361,7 @@ h4 {
     display: flex;
     align-items: center;
     text-align: center;
+    padding-top: 1.5%;
     justify-content: center;
 }
 
@@ -361,7 +372,7 @@ h4 {
     font-size: 20px;
     background: #191919;
     border-radius: 3.5vh;
-    margin: 4vh;
+    margin: 2vh;
     justify-content: center;
     align-items: center;
     transition: 150ms ease-out;
