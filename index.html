@@ -3,6 +3,8 @@
 
 <head>
     <title>Kausar Ahmed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="x-icon" href="Resources/logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,7 +24,7 @@
             <div class="logo">
                 <a href="#home"><img width="60px" height="auto" src="Resources/logo.png"></a>
             </div>
-            <ul>
+            <ul class="nav">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
@@ -42,7 +44,7 @@
     <!----About section start---->
     <section class="about" id="about">
         <div class="main">
-            <img src="Resources/photo.jpg">
+            <img src="Resources/photo.jpg" width="450vh">
             <div class="about-text">
                 <h2>About Me</h2>
                 <h6>short bio</h6>
@@ -50,7 +52,8 @@
                     Alongside my sudies, I am diving into <b>DevOps</b> and <b>Cloud Technology</b>. Apart from this, I
                     involved in volunteering and social work. Now, I am exploring the oppertunities around me, getting
                     out of my comfort zone and learning to push my limits.</p>
-                <a class="about-button" href="#contact">Let's Talk</a>
+                <a class="cv" href="Resources/Kausar Ahmed CV.pdf" target="_blank"><i class="fa fa-download"></i>
+                    Download CV</a>
             </div>
         </div>
     </section>
@@ -64,19 +67,22 @@
 
         <div class="edu-box">
             <div class="edu-card">
-                <h4>University</h4>
-                <p>- Computer science and Engineering (CSE)<br>- University of Liberal Arts Bangladesh(ULAB)</p>
+                <h4><i class="fa fa-graduation-cap"></i> University</h4>
+                <p>University of Liberal Arts Bangladesh(ULAB)<br><br>-Bsc in Computer science and Engineering
+                    (CSE)<br>-years: 2022-present<br>-result: 3.88 out of 4</p>
             </div>
 
             <div class="edu-card">
-                <h4>College</h4>
-                <p>I've completed my HSC in 2020 from Cantonment College Jashore with Golden A+ (gpa). And been a part
-                    of "Display" in annual sports prize giving ceremony</p>
+                <h4><i class="fa fa-university"></i> College</h4>
+                <p>Cantonment College Jashore<br><br>-HSC (Science)
+                    (CSE)<br>-years: 2018-2020<br>-result: 5.00 out of 5.00</p>
             </div>
 
             <div class="edu-card">
-                <h4>School</h4>
-                <p>I've completed my SSC in 2018 from Bheramara Govt. Model High school with Golden A+ (gpa 5.00).</p>
+                <h4><i class="fa fa-school"></i> School</h4>
+                <p>Bheramara Model High School<br><br>-SSC (Science)
+                    (CSE)<br>-years: 2013-2018<br>-result: 5.00 out of 5.00</p>
+                </p>
             </div>
         </div>
     </div>
@@ -84,9 +90,7 @@
 
     <!-----fratured section start----------->
     <div class="featured" id="featured">
-        <div class="title">
-            <h2>Featured</h2>
-        </div>
+        <h2>Featured</h2>
         <table>
             <tr class="card">
                 <td>
@@ -101,9 +105,8 @@
                     <p>-2nd Runners-up National Business Olympiad. <br><br> National Business Olympiad is a platform
                         for young minds to understand what the term 'Corporate world' actually entails. NBO works to
                         encourage the students of business and other sector for growing their corporate and personal
-                        leadership. It's aim to promote awareness of economics,finance and business and tap the business
-                        acumen of budding entrepreneurs by introducing them to real life scenarios and also grow up your
-                        business knowledge, corporate and personal leadership</p>
+                        leadership.</p>
+                    <a href="nbo.html" target="_blank">Know more</a>
                 </td>
             </tr>
             <tr class="card">
@@ -133,18 +136,28 @@
                 </td>
             </tr>
         </table>
+    </div>
 
-        <!------contact start--------->
-        <footer>
-            <p id="contact">Find me on Socials</p>
-            <p>Don't forgot to say hello</p>
-            <div class="social">
+
+    <!------contact start--------->
+    <div class="contact" id="contact">
+        <h6>Contact</h6>
+        <p>say hello</p>
+        <div class="conbox">
+            <div class="concard">
                 <a href="http://www.facebook.com/kausarrahmed/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="mailto:kausarahmed2nd@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                <a href="https://github.com/kausaraahmed" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kausarrahmed/" target="_blank"><i class="fab fa-linkedin"></i>
             </div>
-        </footer>
+            <div class="concard"><a href="mailto:kausarahmed2nd@gmail.com" target="_blank"><i
+                        class="fa fa-envelope"></i></a></div>
+            <div class="concard"><a href="https://github.com/kausaraahmed" target="_blank"><i
+                        class="fab fa-github"></i></a></div>
+            <div class="concard"><a href="https://linkedin.com/in/kausarrahmed/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 
