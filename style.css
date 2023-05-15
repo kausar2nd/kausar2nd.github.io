@@ -25,23 +25,6 @@ nav {
     height: auto;
 }
 
-.nav li {
-    margin: 0 10px;
-}
-
-.nav li:last-child {
-    margin-right: 0;
-}
-
-.navigation {
-    height: 96vh;
-    width: 100%;
-    background-image: url(Resources/background.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-
 nav ul li {
     list-style-type: none;
     display: inline-block;
@@ -58,34 +41,25 @@ nav ul li a {
     text-align: right;
     justify-content: right;
     padding: 3px 3px;
-}
-
-nav ul li a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2.3px;
-    left: 50%;
-    background: #7efdb5;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-
-nav ul li a:hover:after {
-    width: 100%;
-    left: 0;
+    transition: 0.5s ease-out;
 }
 
 nav ul li a:hover {
     cursor: pointer;
+    text-shadow: 0 0 3px rgb(60, 255, 0);
+    color: #64fca6;
+    transition: 0.1s ease-in;
 }
 
-span {
-    color: #60e097
+.cover {
+    height: 96vh;
+    width: 100%;
+    background-image: url(Resources/background.png);
+    background-size: cover;
+    background-position: center;
 }
 
-.content {
+.cover-content {
     position: absolute;
     top: 40%;
     left: 8%;
@@ -93,7 +67,7 @@ span {
     transform: translateY(-50%);
 }
 
-h1 {
+.cover-content h1 {
     color: white;
     margin: 20px 0px 10px;
     font-size: 70px;
@@ -113,23 +87,38 @@ h1 {
     }
 }
 
-h3 {
+.cover-content h3 {
     color: white;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-h4 {
+.cover-content h4 {
     color: #81bf99;
     letter-spacing: 2px;
     font-size: 20px;
 }
+
+span {
+    color: #60e097
+}
+
+
+
+/* About section start */
 
 .about {
     width: 100%;
     height: 96vh;
     padding: 10vh 0px;
     background-color: #191919;
+}
+
+.about-content {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .about img {
@@ -145,14 +134,6 @@ h4 {
     width: 40vw;
     margin-left: 3vw;
     text-align: justify;
-}
-
-.main {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
 }
 
 .about-text h2 {
@@ -194,6 +175,9 @@ h4 {
     font-size: 16px;
 }
 
+
+/* Education section start */
+
 .education {
     background: #101010;
     height: 80vh;
@@ -211,7 +195,6 @@ h4 {
 .edu-box {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 .edu-card {
@@ -258,6 +241,12 @@ h4 {
     justify-content: space-around;
 }
 
+.featured table {
+    margin: auto;
+    width: 65vw;
+    padding: 5vh;
+}
+
 .featured h2 {
     color: white;
     font-size: 10vh;
@@ -268,23 +257,16 @@ h4 {
     font-size: 18px;
     font-family: Cambria;
     color: whitesmoke;
-    padding: 5vh;
+    text-align: justify;
+    padding: 3vh;
     line-height: 4vh;
     letter-spacing: 0.01em;
 }
 
-.featured table {
-    margin: auto;
-    width: 65vw;
-    padding: 5vh;
-}
-
 .featured a {
     float: right;
-    margin-right: 5vh;
-    text-align: right;
+    margin-right: 2vh;
     text-decoration: none;
-    background-color: transparent;
     border: 2px solid #64fca6;
     color: whitesmoke;
     text-decoration: none;
