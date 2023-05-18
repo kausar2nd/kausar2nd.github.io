@@ -12,7 +12,7 @@ html {
 nav {
     display: flex;
     position: absolute;
-    margin-top: 4.5vh;
+    margin-top: 3.5vh;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -150,7 +150,7 @@ span {
 }
 
 .about-text p {
-    color: rgba(236, 224, 236, 0.8);
+    color: rgba(236, 224, 236);
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
@@ -206,7 +206,16 @@ span {
     margin: 4vh;
     justify-content: center;
     align-items: center;
-    transition: 150ms ease-out;
+    transition: 200ms ease-out;
+    border: 0.5px solid whitesmoke;
+    transform: scale(1.04);
+}
+
+.edu-card:hover {
+    cursor: pointer;
+    border: 2px solid #64fca6;
+    transition: 100ms ease-in;
+    transform: scale(1.02);
 }
 
 .edu-card h4 {
@@ -226,16 +235,14 @@ span {
     transition: 150ms ease-out;
 }
 
-.edu-card:hover {
-    cursor: pointer;
-    border: 0.5px solid #64fca6;
-    transition: 200mss ease-in;
-}
+
+
+/* featured section start */
 
 .featured {
     background: #191919;
     width: 100%;
-    height: 202vh;
+    height: 230vh;
     padding: 8vh;
     align-items: center;
     justify-content: space-around;
@@ -243,7 +250,7 @@ span {
 
 .featured table {
     margin: auto;
-    width: 65vw;
+    width: 70vw;
     padding: 5vh;
 }
 
@@ -267,7 +274,7 @@ span {
     float: right;
     margin-right: 2vh;
     text-decoration: none;
-    border: 2px solid #64fca6;
+    border: 1.5px solid #64fca6;
     color: whitesmoke;
     text-decoration: none;
     font-weight: 900;
@@ -279,14 +286,13 @@ span {
 .featured a:hover {
     color: #101010;
     background-color: #64fca6;
-    border: 2px solid transparent;
     cursor: pointer;
-    font-size: 16px;
 }
 
 .card {
     display: flex;
-    padding: 2vh;
+    padding: 4vh;
+    margin: 5vh;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -294,10 +300,17 @@ span {
     position: relative;
     overflow: hidden;
     transition: 0.3s;
+    border: 0.5px solid white;
+    background-color: rgba(16, 16, 16, 0.91);
 }
 
 .card:hover {
-    background-color: rgba(16, 16, 16, 0.91);
+    cursor: pointer;
+    border: 1px solid #64fca6;
+    transform: scale(1.02);
+}
+
+.project-card:hover {
     cursor: pointer;
     border: 0.5px solid #64fca6;
     transform: scale(1.02);
@@ -311,10 +324,107 @@ span {
     border-radius: 6%;
 }
 
+
+/* project section :start */
+
+.project {
+    background: #101010;
+    width: 100%;
+    height: 155vh;
+    padding: 8vh;
+    justify-content: space-around;
+}
+
+.project table {
+    margin: auto;
+    width: 70vw;
+    padding: 2vh;
+}
+
+.project h2 {
+    color: white;
+    font-size: 10vh;
+    text-align: center;
+}
+
+.project h3 {
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.project p {
+    font-size: 18px;
+    font-family: Cambria;
+    color: whitesmoke;
+    text-align: justify;
+    padding: 3.5vh;
+    line-height: 4vh;
+    letter-spacing: 0.01em;
+}
+
+.project a {
+    border: 1px solid #64fca6c5;
+    color: rgba(245, 245, 245, 0.881);
+    text-decoration: none;
+    font-weight: 900;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.project a:hover {
+    color: #191919;
+    background-color: #64fca6b8;
+    cursor: pointer;
+}
+
+.project_1 {
+    float: right;
+    margin-right: 3vh;
+}
+
+.project_2 {
+    float: left;
+    margin-left: 3vh;
+}
+
+.project_showall {
+    margin-left: 44%;
+}
+
+.project-card {
+    display: flex;
+    padding: 3vh;
+    margin: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 5vh;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    border: 0.5px solid white;
+    background-color: #191919;
+}
+
+.project-card:hover {
+    cursor: pointer;
+    border: 1px solid #64fca6;
+    transform: scale(1.02);
+}
+
+.project-card img {
+    border-radius: 3vh;
+}
+
+
+/* Contact section start */
+
 .contact {
     width: 100%;
     height: 35vh;
-    background: #101010;
+    background: #191919;
     align-items: center;
 }
 
@@ -352,12 +462,13 @@ span {
     height: 7vh;
     width: 7vh;
     font-size: 20px;
-    background: #191919;
+    background: #101010;
     border-radius: 3.5vh;
     margin: 2vh;
     justify-content: center;
     align-items: center;
     transition: 150ms ease-out;
+    border: 0.5px solid whitesmoke;
 }
 
 .concard:hover {
