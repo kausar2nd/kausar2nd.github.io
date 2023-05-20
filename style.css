@@ -9,6 +9,12 @@ html {
     scroll-behavior: smooth;
 }
 
+.logo img {
+    margin-left: 2vw;
+    width: 8vh;
+    height: auto;
+}
+
 nav {
     display: flex;
     position: absolute;
@@ -19,11 +25,6 @@ nav {
     box-shadow: #60e097;
 }
 
-.logo img {
-    margin-left: 2vw;
-    width: 8vh;
-    height: auto;
-}
 
 nav ul li {
     list-style-type: none;
@@ -417,7 +418,7 @@ span {
 
 .contact {
     width: 100%;
-    height: 35vh;
+    height: 36vh;
     background: #191919;
     align-items: center;
 }
@@ -444,11 +445,12 @@ span {
 }
 
 .conbox {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-align: center;
     padding-top: 1.5%;
     justify-content: center;
+    margin-left: 39%;
 }
 
 .concard {
@@ -461,13 +463,35 @@ span {
     margin: 2vh;
     justify-content: center;
     align-items: center;
-    transition: 150ms ease-out;
+    transition: 0.3s ease-out;
     border: 1px solid whitesmoke;
 }
 
 .concard:hover {
     cursor: pointer;
-    border: 0.5px solid #64fca6;
+    border: 1px solid #64fca6;
     transform: scale(1.1);
-    transition: 200mss ease-in;
+    transition: 0.3s ease-in;
+}
+
+.toTop {
+    margin-left: 32vw;
+    display: flex;
+    height: 8vh;
+    width: 7vh;
+    font-size: 5vh;
+    background: black;
+    border-radius: 15%;
+    justify-content: center;
+    align-items: center;
+    border: 0.1px solid rgba(245, 245, 245, 0.2);
+    transition: 0.3s;
+}
+
+.toTop:hover {
+    cursor: pointer;
+    /* background: #101010; */
+    border: 1px solid #64fca6;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
