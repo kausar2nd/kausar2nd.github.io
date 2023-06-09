@@ -62,7 +62,7 @@ nav ul li a:hover {
 .cover {
     height: 96vh;
     width: 100%;
-    background-image: url(Resources/background.png);
+    background-image: url(Resources/background.jpg);
     background-size: cover;
     background-position: center;
 }
