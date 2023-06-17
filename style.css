@@ -62,7 +62,7 @@ nav ul li a:hover {
 .cover {
     height: 96vh;
     width: 100%;
-    background-image: url(Resources/background.jpg);
+    background-image: url(Resources/background.png);
     background-size: cover;
     background-position: center;
 }
@@ -254,7 +254,7 @@ span {
 .featured {
     background: #191919;
     width: 100%;
-    height: 230vh;
+    height: 290vh;
     padding: 8vh;
     align-items: center;
     justify-content: space-around;
@@ -312,13 +312,13 @@ span {
     position: relative;
     overflow: hidden;
     transition: 0.3s;
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: rgba(16, 16, 16, 0.91);
 }
 
 .card:hover {
     cursor: pointer;
-    border: 1px solid #64fca6;
+    border: 2px solid #64fca6;
     box-shadow: 0 0 7px #64fca665;
     transform: scale(1.02);
 }
@@ -411,13 +411,13 @@ span {
     position: relative;
     overflow: hidden;
     transition: 0.25s;
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: #191919;
 }
 
 .project-card:hover {
     cursor: pointer;
-    border: 1px solid #64fca6;
+    border: 2px solid #64fca6;
     box-shadow: 0 0 7px #64fca665;
     transform: scale(1.02);
 }
