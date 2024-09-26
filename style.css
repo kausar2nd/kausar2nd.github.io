@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    /* font-family: 'Roboto', sans-serif; */
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
 }
@@ -58,24 +57,24 @@ nav ul li a:hover {
 
 
 .cover {
-    background-image: url("/Resources/background.jpg");
-    background-size: cover;
-    background-position: center center;
-    height: 97vh;
     display: flex;
+    height: 97vh;
     align-items: center;
     justify-content: center;
     color: white;
+    /* do not use quotes in the url path */
+    background-image: url(Resources/background.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 @media screen and (max-width: 767px) {
     .cover {
         height: 0;
-        padding-bottom: 56.25%;
         /* 16:9 aspect ratio */
+        padding-bottom: 56.25%;
     }
 }
-
 
 .cover-content {
     position: absolute;
