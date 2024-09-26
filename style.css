@@ -65,6 +65,7 @@ nav ul li a:hover {
     /* do not use quotes in the url path */
     background: url(./Resources/background.png);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center center;
 }
 
