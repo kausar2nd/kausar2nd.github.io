@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="x-icon" href="Resources/logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,9 +28,9 @@
         <ul class="nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#projects">projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#featured">Featured</a></li>
-            <li><a href="#projects">projects</a></li>
             <li><a href="#">blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -37,7 +39,6 @@
     <!----website cover start---->
     <div class="cover" id="home">
         <div class="cover-content">
-            <h4>I am</h4>
             <h1>Kausar <span> Ahmed</span></h1>
             <h3>Aspiring Machine Learning Engineer || <span>CSE@ULAB</span></h3>
         </div>
@@ -61,46 +62,95 @@
             </div>
         </div>
     </div>
+    <!----About section end---->
+
 
     <!-----projects section start----------->
     <div class="project" id="projects">
         <h2>Projects</h2>
-        <table>
-            <tr class="project-card">
-                <td>
-                    <img src="Resources/tictactoe.png" alt="" width="350" height="350">
-                </td>
-                <td>
-                    <h3>Tic Tac Toe Game</h3>
-                    <p>This is a basic tic tac toe game. Played with 2 players. The game is played on a 3x3 grid.
-                        Each player takes turns placing their mark in an empty square. The first player to get three of
-                        their marks in a row, horizontally, vertically, or diagonally, wins the game.<br><br>Language
-                        Used: <b>C</b>
+        <div class="grid-container">
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="Resources/tic-tactoe.png" alt="">
+                </div>
+                <div class="project-details">
+                    <h4>Tic-Tac-Toe</h4>
+                    <p>
+                        Klashcard is a versatile flashcard application designed to help users practice vocabulary. While
+                        this example demonstrates English to Bangla translation, the application can be easily modified
+                        to support anyvother types of learning flashcards. <br> <br>
+                        <b>Language:</b> Python <br>
                     </p>
-                    <a class="project_1" href="https://github.com/kausaraahmed/Tic-Tac-Toe-Game" target="_blank"><i
-                            class="fas fa-share-square"></i> github repo</a>
-                </td>
-            </tr>
+                    <a href="https://github.com/kausaraahmed/CS50P-Final-Project" target="_blank"
+                        title="Project Repository">GitHub</a>
+                </div>
+            </div>
 
-            <tr class="project-card">
-                <td>
-                    <h3>Simple Billing System</h3>
-                    <p>The program allows users to add items to their cart, specify the quantity of each item, and then
-                        checkout. The program calculates the total cost and generates a receipt.
-                        It is easy to use and it is capable of handling a variety of billing tasks.<br><br>Language
-                        Used: <b>Java</b>
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="Resources/schedulumos.png" alt="">
+                </div>
+                <div class="project-details">
+                    <h4>ScheduLumos</h4>
+                    <p>
+                        This web application designed to simulate and visualize CPU scheduling algorithms. This tool is
+                        particularly useful for students and educators in computer science to
+                        learn the behavior of the algorithms. <br> <br>
+                        <b>Frontend:</b> HTML5, CSS3, JavaScript <br>
+                        <b>Backend:</b> Python, Flask
                     </p>
-                    <a class="project_2" href="https://github.com/kausaraahmed/Billing-System" target="_blank"><i
-                            class="fas fa-share-square"></i> github repo</a>
-                </td>
-                <td>
-                    <img src="Resources/billing.png" alt="" width="450" height="350">
-                </td>
-            </tr>
-        </table>
-        <a class="project_showall" href="https://github.com/kausaraahmed?tab=repositories" target="_blank"><i
-                class="fas fa-share-square"></i> Show all</a>
+                    <a href="https://schedulumos.onrender.com/" target="_blank" title="Site Link">link ↗</a>
+                    <a href="https://github.com/kausaraahmed/ScheduLumos" target="_blank"
+                        title="Project Repository">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="Resources/routinio.png" alt="">
+                </div>
+                <div class="project-details">
+                    <h4>GenRoutine</h4>
+                    <p>
+                        Routine Generator: This is a web application designed to assist users in creating and managing
+                        personalized routines for academic purposes. <br> <br>
+                        <b>Frontend:</b> HTML5, CSS3, JavaScript <br>
+                        <b>Backend:</b> Python, Flask
+                    </p>
+                    <a href="https://schedulumos.genroutine.com/" target="_blank" title="Site Link">link ↗</a>
+                    <a href="https://github.com/kausaraahmed/routine_generator" target="_blank"
+                        title="Project Repository">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="Resources/klashcard.png" alt="">
+                </div>
+                <div class="project-details">
+                    <h4>KlashCard</h4>
+                    <p>
+                        Klashcard is a versatile flashcard application designed to help users practice vocabulary. While
+                        this example demonstrates English to Bangla translation, the application can be easily modified
+                        to support anyvother types of learning flashcards. <br> <br>
+                        <b>Frontend:</b> CustomTkinter (Python) <br>
+                        <b>Backend:</b> Python
+                    </p>
+                    <a href="https://drive.google.com/file/d/1cN3Wk2WoJffpyJ8K0vXlqyoW7tuqo6JA/view?usp=sharing"
+                        target="_blank" title="Site Link">exe file</a>
+                    <a href="https://github.com/kausaraahmed/klashcard" target="_blank"
+                        title="Project Repository">GitHub</a>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-----projects section end----------->
+
 
     <!----Education section start---->
     <div class="education" id="education">
@@ -127,6 +177,7 @@
             </div>
         </div>
     </div>
+    <!----Education section end---->
 
 
     <!-----fratured section start----------->
@@ -142,7 +193,6 @@
                         width="500" height="377" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                         allowfullscreen="true"
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
                 </td>
                 <td>
                     <p><b>2nd Runners-up National Business Olympiad.</b><br><br>National Business Olympiad is a platform
@@ -229,7 +279,9 @@
                         class="fab fa-linkedin"></i></a>
             </div>
 
-            <div class="toTop" title="Go to top"><a href="#home"><i class="fas fa-angle-double-up"></i></a></div>
+            <a href="#home">
+                <div class="toTop" title="Go to top"><i class="fas fa-angle-double-up"></i></div>
+            </a>
 
         </div>
     </div>
