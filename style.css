@@ -63,7 +63,7 @@ nav ul li a:hover {
     justify-content: center;
     color: white;
     /* do not use quotes in the url path */
-    background: url(/Resources/background.jpg);
+    background: url(./Resources/background.png);
     background-size: cover;
     background-position: center center;
 }
