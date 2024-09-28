@@ -25,3 +25,24 @@ modal.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+// for sticky navbar
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+        // If we scroll down 50px or more, apply the "solid" class
+        navbar.classList.add("solid");
+        navbar.classList.remove("transparent");
+    } else {
+        // If we are at the top of the page, make it transparent again
+        navbar.classList.add("transparent");
+        navbar.classList.remove("solid");
+    }
+});
+
+// Make sure the navbar starts as transparent
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.add("transparent");
+});
