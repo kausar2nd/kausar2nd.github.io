@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background: url(./assets/background.png);
+    background: url(./assets/background.jpg);
     background-color: #101010;
     background-size: contain;
     background-repeat: no-repeat;
@@ -341,7 +341,6 @@ span {
     height: fit-content;
     justify-content: center;
     align-items: center;
-    margin-top: 2.5vw;
 }
 
 .featured-container {
