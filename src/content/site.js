@@ -1,6 +1,6 @@
 export const siteMeta = {
   brand: "Kausar Ahmed",
-  title: "Kausar Ahmed — Researcher",
+  title: "Kausar Ahmed",
   description:
     "Personal academic page of Kausar Ahmed — Research Assistant at ULAB, focused on NLP, RAG, and information retrieval.",
   socialDescription:
