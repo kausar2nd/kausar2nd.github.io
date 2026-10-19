@@ -1,35 +1,49 @@
 export const projects = [
   {
-    title: "Open Research Toolkit",
+    title: "LawB: An Interpretable RAG-Based Legal Assistant for Bangladesh",
     status: "Active",
     summary:
-      "A reusable research software project with documentation, reproducible examples, releases, and an academic artifact trail.",
-    tags: ["Research Software", "Reproducibility", "Documentation"],
+      "A RAG-based legal assistant for the Bangladeshi legal corpus with two-stage retrieval (BGE-M3 + cross-encoder reranking) and local LLMs via Ollama.",
+    tags: ["RAG", "NLP", "Legal Tech", "Python"],
+    links: []
+  },
+  {
+    title: "Bilingual Multimodal RAG Learning Assistant for NCTB Curriculum",
+    status: "Active",
+    summary:
+      "A Bengali/English conversational RAG pipeline with LLM-based query rewriting, hybrid retrieval (BM25 + dense, rank fusion), and ColPali page-image retrieval over textbook scans.",
+    tags: ["RAG", "Multimodal", "Education", "Bengali NLP"],
+    links: []
+  },
+  {
+    title: "EXIREN — AIoT Fire Detection System",
+    status: "Completed",
+    summary:
+      "An AIoT fire detection system integrating YOLOv11 with IoT sensor validation to reduce false alarm rates.",
+    tags: ["Computer Vision", "IoT", "YOLOv11", "Flask"],
     links: [
-      { label: "Code", href: "https://github.com/example/open-research-toolkit", stars: 128 },
-      { label: "Release", href: "https://github.com/example/open-research-toolkit/releases" }
+      { label: "Code", href: "https://github.com/kausar2nd/EXIREN" }
     ]
   },
   {
-    title: "Dataset Explorer",
-    status: "Prototype",
+    title: "ShunnoWaste: A Recycling Ecosystem",
+    status: "Completed",
     summary:
-      "An interactive project page for dataset cards, benchmark splits, model outputs, and reproducibility notes.",
-    tags: ["Dataset", "Benchmark", "Demo"],
+      "A full-stack recycling platform with role-based dashboards and inventory management built with Flask and MySQL.",
+    tags: ["Full Stack", "Flask", "MySQL", "Sustainability"],
     links: [
-      { label: "Code", href: "https://github.com/example/dataset-explorer", stars: 64 },
-      { label: "Demo", href: "https://example.com/dataset-explorer" }
+      { label: "Code", href: "https://github.com/kausar2nd/ShunnoWaste" }
     ]
   },
   {
-    title: "Course Companion",
-    status: "Maintained",
+    title: "ScheduLumos — CPU Scheduling Algorithms",
+    status: "Completed",
     summary:
-      "A lightweight teaching portal for schedules, readings, assignments, office hours, and lecture materials.",
-    tags: ["Teaching", "Courseware", "Students"],
+      "A web-based CPU scheduling algorithm visualizer with Gantt charts and performance metrics.",
+    tags: ["Visualization", "Operating Systems", "Flask"],
     links: [
-      { label: "Site", href: "https://example.com/course" },
-      { label: "Slides", href: "https://example.com/course-slides" }
+      { label: "Code", href: "https://github.com/kausar2nd/ScheduLumos" },
+      { label: "Live", href: "https://schedulumos.vercel.app/" }
     ]
   }
 ];

@@ -1,18 +1,18 @@
 export const talks = [
   {
-    period: "2026.03",
-    title: "Designing Research Websites That Age Well",
-    place: "Example Lab Seminar",
-    href: "https://example.com/talks/research-websites",
-    detail: "Invited talk on maintainable academic publishing surfaces.",
+    period: "2025.11",
+    title: "Invited Panelist",
+    place: "Educational Innovation Symposium 2025, ULAB",
+    href: "https://www.facebook.com/photo/?fbid=1665137111525369",
+    detail: "Invited as the student panelist for an academic policy panel discussion on LMS standardization organized by the Center for Excellence in Teaching and Learning (CETL).",
     type: "Invited"
   },
   {
     period: "2025.11",
-    title: "Reproducibility Beyond the PDF",
-    place: "Open Science Workshop",
-    href: "https://example.com/talks/reproducibility",
-    detail: "Workshop talk on linking papers, code, datasets, demos, and errata.",
-    type: "Workshop"
+    title: "Poster: The Proof-of-Learning Framework",
+    place: "Educational Innovation Symposium 2025, ULAB",
+    href: "",
+    detail: "Presented a poster proposing a defense-based assessment model for the AI era.",
+    type: "Poster"
   }
 ];

@@ -1,18 +1,18 @@
 export const experience = [
   {
-    period: "2024 - Now",
-    title: "Assistant Professor",
-    place: "Example University",
-    href: "https://example.com/",
-    detail: "Leading a research group on trustworthy, interactive, and open computational systems.",
-    type: "Academic"
+    period: "Sep 2026 — Present",
+    title: "Research Assistant (RA)",
+    place: "University of Liberal Arts Bangladesh (ULAB)",
+    href: "https://www.ulab.edu.bd/",
+    detail: "Conducting NLP research with faculty on ongoing projects. Mentoring capstone and thesis students on research design and preparing manuscripts for publication.",
+    type: "Research"
   },
   {
-    period: "2022 - 2023",
-    title: "Research Intern",
-    place: "Example Research Lab",
-    href: "https://example.com/",
-    detail: "Worked on tool-supported evaluation and dataset governance.",
-    type: "Research"
+    period: "Jan 2026 — Sep 2026",
+    title: "Teaching Assistant (TA)",
+    place: "University of Liberal Arts Bangladesh (ULAB)",
+    href: "https://www.ulab.edu.bd/",
+    detail: "Assisted faculty in lab courses with ~40 students per class. Mentored students, debugged student work, and clarified concepts during sessions.",
+    type: "Academic"
   }
 ];

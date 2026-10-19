@@ -49,6 +49,9 @@
   --section: min(1260px, calc(100vw - 48px));
   --fa-family-classic: "Font Awesome 7 Free";
   --fa-family-brands: "Font Awesome 7 Brands";
+  --scrollbar-track: rgba(36, 90, 150, 0.04);
+  --scrollbar-thumb: rgba(36, 90, 150, 0.18);
+  --scrollbar-thumb-hover: rgba(36, 90, 150, 0.32);
 }
 
 :root[data-theme="dark"] {
@@ -91,6 +94,9 @@
   --hover-shadow: 0 22px 48px rgba(0, 0, 0, 0.34);
   --sidebar-hover-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
   --avatar-shadow: rgba(0, 0, 0, 0.34);
+  --scrollbar-track: rgba(100, 180, 255, 0.04);
+  --scrollbar-thumb: rgba(140, 191, 255, 0.2);
+  --scrollbar-thumb-hover: rgba(140, 191, 255, 0.38);
 }
 
 @font-face {
@@ -268,6 +274,7 @@
 }
 
 @supports (content: "" / "") {
+
   .fa::before,
   .fa-solid::before,
   .fa-brands::before,
@@ -321,7 +328,32 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  transition: background-color 180ms ease, color 180ms ease;
+  transition: background-color 320ms cubic-bezier(0.4, 0, 0.2, 1), color 320ms cubic-bezier(0.4, 0, 0.2, 1);
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+/* Webkit scrollbar theming */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 a {
@@ -426,6 +458,7 @@ a:focus-visible {
   font-size: 0.84rem;
   font-weight: 450;
   padding: 7px 9px;
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1), color 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .primary-nav a:hover {
@@ -443,6 +476,7 @@ a:focus-visible {
   border-radius: var(--radius);
   background: var(--control-bg);
   color: var(--ink);
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1), border-color 280ms cubic-bezier(0.4, 0, 0.2, 1), color 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-button {
@@ -475,12 +509,14 @@ a:focus-visible {
 
 .profile-sidebar {
   position: sticky;
-  top: 84px;
-  max-height: calc(100vh - 84px);
-  overflow-y: auto;
-  padding-top: 34px;
-  padding-bottom: 24px;
-  scrollbar-width: thin;
+  top: 64px;
+  height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .sidebar-card {
@@ -606,66 +642,6 @@ a:focus-visible {
   letter-spacing: 0;
 }
 
-.sidebar-news {
-  display: grid;
-  gap: 12px;
-}
-
-.sidebar-news a {
-  position: relative;
-  display: grid;
-  gap: 3px;
-  margin: -5px -8px;
-  padding: 7px 8px 7px 9px;
-  border: 1px solid transparent;
-  border-left: 2px solid transparent;
-  border-radius: 6px;
-  color: var(--ink);
-  font-size: 0.82rem;
-  line-height: 1.42;
-  transition:
-    background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    color 180ms ease,
-    transform 180ms ease;
-}
-
-.sidebar-news a:hover,
-.sidebar-news a:focus-visible {
-  border-color: var(--border-soft);
-  border-left-color: var(--blue);
-  background: var(--row-hover-gradient);
-  box-shadow: var(--sidebar-hover-shadow);
-  text-decoration: none;
-  transform: translateX(3px);
-}
-
-.sidebar-news time {
-  color: var(--blue);
-  font-size: 0.8rem;
-  font-weight: 560;
-}
-
-.sidebar-news-text {
-  display: grid;
-  grid-template-columns: 20px minmax(0, 1fr);
-  gap: 6px;
-  align-items: start;
-}
-
-.sidebar-news-icon {
-  display: inline-grid;
-  width: 18px;
-  height: 18px;
-  place-items: center;
-}
-
-.sidebar-news-icon .semantic-icon {
-  width: 15px;
-  height: 15px;
-}
-
 .about-section {
   padding-top: 34px;
 }
@@ -689,12 +665,14 @@ a:focus-visible {
   color: var(--icon-text);
   font-size: 1.06rem;
   line-height: 1;
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1), border-color 280ms cubic-bezier(0.4, 0, 0.2, 1), color 280ms cubic-bezier(0.4, 0, 0.2, 1), transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .profile-links a:hover {
   border-color: var(--title-icon-border);
   background: var(--blue-soft);
   color: var(--blue);
+  transform: translateY(-2px);
 }
 
 .sidebar-toggle {
@@ -714,6 +692,7 @@ a:focus-visible {
   line-height: 1;
   padding: 8px 12px;
   cursor: pointer;
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1), border-color 280ms cubic-bezier(0.4, 0, 0.2, 1), color 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sidebar-toggle:hover {
@@ -1022,21 +1001,27 @@ a:focus-visible {
 
 .news-list {
   max-height: 260px;
-  overflow: auto;
+  /* horizontal scroll off */
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* overflow: auto; */
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
   background: transparent;
   box-shadow: none;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
 }
 
 .news-row {
   display: grid;
   grid-template-columns: 76px 22px minmax(0, 1fr) 14px;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   padding: 7px 2px;
   border-bottom: 1px solid var(--border-soft);
   color: var(--ink);
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .news-row:last-child {
@@ -1087,7 +1072,7 @@ a:focus-visible {
   margin-top: 30px;
 }
 
-.publication-group > h3 {
+.publication-group>h3 {
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -1098,13 +1083,13 @@ a:focus-visible {
   font-weight: 560;
 }
 
-.publication-group > h3 .title-icon {
+.publication-group>h3 .title-icon {
   width: 22px;
   height: 22px;
   border-radius: 5px;
 }
 
-.publication-group > h3 .title-icon .semantic-icon {
+.publication-group>h3 .title-icon .semantic-icon {
   width: 16px;
   height: 16px;
 }
@@ -1128,10 +1113,10 @@ a:focus-visible {
   box-shadow: var(--subtle-shadow);
   padding: 18px;
   transition:
-    background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+    background 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .featured-paper:hover,
@@ -1149,9 +1134,9 @@ a:focus-visible {
   background: var(--figure-bg);
   padding: 8px;
   transition:
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+    border-color 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .featured-paper:hover .paper-figure,
@@ -1170,7 +1155,7 @@ a:focus-visible {
   height: 100%;
   object-fit: contain;
   display: block;
-  transition: transform 220ms ease;
+  transition: transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .featured-paper:hover .paper-figure img,
@@ -1235,10 +1220,10 @@ a:focus-visible {
   font-weight: 500;
   padding: 5px 8px;
   transition:
-    background 160ms ease,
-    border-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
+    background 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .action-links a:hover {
@@ -1248,7 +1233,7 @@ a:focus-visible {
   transform: translateY(-1px);
 }
 
-.action-links a > i {
+.action-links a>i {
   min-width: 1em;
   text-align: center;
 }
@@ -1289,6 +1274,7 @@ a:focus-visible {
   padding: 10px 10px;
   margin: 0 -10px;
   border-radius: 6px;
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .compact-paper-row:hover {
@@ -1328,6 +1314,7 @@ a:focus-visible {
   justify-content: flex-end;
   margin-top: 0;
   gap: 5px;
+  transition: background 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .compact-paper-row .action-links a {
@@ -1336,6 +1323,8 @@ a:focus-visible {
   color: var(--muted);
   font-size: 0.77rem;
   padding: 3px 4px;
+  transition: background 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .compact-paper-row .action-links a:hover {
@@ -1343,11 +1332,11 @@ a:focus-visible {
   color: var(--blue);
 }
 
-.compact-paper-row .action-links a > i {
+.compact-paper-row .action-links a>i {
   color: var(--subtle);
 }
 
-.compact-paper-row .action-links a:hover > i {
+.compact-paper-row .action-links a:hover>i {
   color: var(--blue);
 }
 
@@ -1396,6 +1385,7 @@ a:focus-visible {
   overscroll-behavior-inline: contain;
   scroll-padding-inline: 2px;
   scroll-snap-type: inline proximity;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   scrollbar-width: thin;
   padding: 3px 2px 12px;
 }
@@ -1417,10 +1407,10 @@ a:focus-visible {
   box-shadow: var(--subtle-shadow);
   padding: 16px;
   transition:
-    background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+    background 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 340ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-card:hover,
@@ -1495,6 +1485,7 @@ a:focus-visible {
   border-bottom: 1px solid var(--border);
   border-radius: 6px;
   color: var(--ink);
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .timeline-item:hover {
@@ -1585,6 +1576,7 @@ a.timeline-place:hover {
 
 .honor-row {
   padding: 12px 8px;
+  transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-chip-grid {
@@ -1682,7 +1674,8 @@ a.timeline-place:hover {
 
   .profile-sidebar {
     position: static;
-    max-height: none;
+    height: auto;
+    display: block;
     overflow: visible;
     padding-top: 24px;
     padding-bottom: 0;
@@ -1889,6 +1882,7 @@ a.timeline-place:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .sidebar-news a,
   .project-card,
   .featured-paper,

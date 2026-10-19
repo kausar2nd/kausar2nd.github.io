@@ -1,35 +1,33 @@
 export const profile = {
-  name: "Researcher Name",
+  name: "Kausar Ahmed",
   nativeName: "",
-  role: "Assistant Professor",
-  organization: "Example University",
-  organizationUrl: "https://example.com/",
-  location: "City, Country",
-  email: "researcher@example.edu",
-  avatar: "",
-  focus: ["Machine Learning", "Human-Computer Interaction", "Data Systems", "Digital Scholarship"],
-  highlightNames: ["Researcher Name"],
+  role: "Research Assistant",
+  organization: "University of Liberal Arts Bangladesh (ULAB)",
+  organizationUrl: "https://www.ulab.edu.bd/",
+  location: "Dhaka, Bangladesh",
+  email: "kausarahmed2nd@gmail.com",
+  avatar: "images/Kausar.png",
+  focus: ["Natural Language Processing", "Retrieval-Augmented Generation", "Information Retrieval", "Low-Resource NLP"],
+  highlightNames: ["Ahmed, K.", "Kausar Ahmed"],
   about: [
     [
       "I am ",
-      { text: "Researcher Name", strong: true },
-      ", an Assistant Professor at ",
-      { text: "Example University", href: "https://example.com/" },
-      ". My group builds reliable, human-centered computational systems."
+      { text: "Kausar Ahmed", strong: true },
+      ", a Research Assistant at the ",
+      { text: "University of Liberal Arts Bangladesh (ULAB)", href: "https://www.ulab.edu.bd/" },
+      ". I completed my B.Sc. in Computer Science and Engineering from ULAB with a CGPA of 3.89/4.00."
     ],
-    "My research spans learning algorithms, interactive tools, data infrastructure, and responsible deployment in real-world settings.",
+    "My research interests lie in Retrieval-Augmented Generation (RAG), information retrieval and reranking, efficient retrieval systems, and NLP for low-resource languages, particularly Bengali. I have published in peer-reviewed journals and IEEE conferences.",
     [
-      "I am always interested in research collaboration, student mentoring, and open-source academic infrastructure. Contact: ",
-      { text: "researcher@example.edu", href: "mailto:researcher@example.edu" },
+      "I am open to research collaboration and graduate opportunities. Feel free to reach out: ",
+      { text: "kausarahmed2nd@gmail.com", href: "mailto:kausarahmed2nd@gmail.com" },
       "."
     ]
   ],
   links: [
-    { label: "Email", href: "mailto:researcher@example.edu", icon: "Email" },
-    { label: "Google Scholar", href: "https://scholar.google.com/", icon: "Scholar" },
-    { label: "ORCID", href: "https://orcid.org/", icon: "ORCID" },
-    { label: "DBLP", href: "https://dblp.org/", icon: "DBLP" },
-    { label: "GitHub", href: "https://github.com/", icon: "GitHub" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "LinkedIn" }
+    { label: "Email", href: "mailto:kausarahmed2nd@gmail.com", icon: "Email" },
+    { label: "Google Scholar", href: "https://scholar.google.co.uk/citations?user=Y_3_KbEAAAAJ", icon: "Scholar" },
+    { label: "GitHub", href: "https://github.com/kausar2nd", icon: "GitHub" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/kausar2nd", icon: "LinkedIn" }
   ]
 };

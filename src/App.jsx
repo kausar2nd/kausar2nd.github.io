@@ -250,25 +250,6 @@ function SidebarProfile() {
             <TagList items={profile.focus} className="focus-row" />
           </div>
         ) : null}
-
-        {news.length ? (
-          <div className="sidebar-block">
-            <h2>Recent News</h2>
-            <div className="sidebar-news">
-              {news.slice(0, 4).map((item) => (
-                <a href={item.href} key={`${item.date}-${item.text}`} target="_blank" rel="noreferrer">
-                  <time>{item.date}</time>
-                  <span className="sidebar-news-text">
-                    <span className="sidebar-news-icon" aria-hidden="true">
-                      <SemanticIcon icon={newsIconMap[item.icon] ?? newsIconMap.accepted} />
-                    </span>
-                    <span>{item.text}</span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        ) : null}
       </div>
     </div>
   );
@@ -334,13 +315,13 @@ function DonutChart({ title, data }) {
   let start = 0;
   const gradient = total
     ? `conic-gradient(${data
-        .map((item, index) => {
-          const end = start + (item.value / total) * 360;
-          const segment = `${chartColors[index % chartColors.length]} ${start}deg ${end}deg`;
-          start = end;
-          return segment;
-        })
-        .join(", ")})`
+      .map((item, index) => {
+        const end = start + (item.value / total) * 360;
+        const segment = `${chartColors[index % chartColors.length]} ${start}deg ${end}deg`;
+        start = end;
+        return segment;
+      })
+      .join(", ")})`
     : "var(--surface-strong)";
 
   return (
@@ -771,7 +752,7 @@ function useGithubRepoStats(collections) {
       }
     };
 
-    let cleanupIdle = () => {};
+    let cleanupIdle = () => { };
     const cleanupLoad = runAfterInitialLoad(() => {
       cleanupIdle = runWhenIdle(loadStats, 1200);
     });
