@@ -6,7 +6,7 @@ export const siteMeta = {
   socialDescription:
     "Kausar Ahmed's academic homepage featuring publications, projects, awards, and research experience.",
   // Leave empty for automatic GitHub Pages URLs; set once for a custom domain.
-  url: "kausarahmed.me",
+  url: "https://kausarahmed.me",
   image: "images/Kausar.png",
   repositoryUrl: "https://github.com/kausar2nd/kausar2nd.github.io"
 };
